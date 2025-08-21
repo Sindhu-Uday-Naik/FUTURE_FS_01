@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-// Use env var if set, otherwise default to your Render backend
 const API = import.meta.env.VITE_API_URL || "https://future-fs-01-server.onrender.com";
+
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -45,9 +45,7 @@ export default function Contact() {
           </div>
 
           <div style={{ marginTop: 12 }}>
-            <button className="btn" type="submit" disabled={status === "sending"}>
-              {status === "sending" ? "Sending..." : "Send message"}
-            </button>
+            <button className="btn" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending..." : "Send message"}</button>
             {status === "success" && <span style={{ marginLeft: 12 }} className="muted">✅ Sent — check your inbox.</span>}
             {status === "error" && <span style={{ marginLeft: 12, color: "#ff7b7b" }}>❌ Failed to send</span>}
           </div>
