@@ -42,7 +42,7 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <div className="container">© {new Date().getFullYear()} Your Name — Built with React</div>
+        <div className="container">© {new Date().getFullYear()} Sindhu Uday Naik — Built with React</div>
       </footer>
     </>
   );
